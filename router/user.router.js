@@ -59,7 +59,7 @@ module.exports = () => {
                 res.status(400);
                 res.json({error:err});
             }else{
-                res.json({msj:"Todo estuvo bien"});
+                res.json({msj:"Todo estuvo bien, se elimino correctamente"});
             }
         })    
 
