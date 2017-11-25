@@ -3,16 +3,20 @@
  */
 const mongoose = require('mongoose');
 
-const camionSchema = new mongoose.Schema({
-    numcam: {
+const tipos_pSchema = new mongoose.Schema({
+    idparada: {
         type: Number,
         required: true
     }, 
-    numruta: {
+    nombre: {
         type: Number,
         required: true
     },
-    ubgps: {
+    tipo: {
+        type: String,
+        required: true
+    },
+    alerta: {
         type: String,
         required: true
     },
@@ -21,4 +25,4 @@ const camionSchema = new mongoose.Schema({
 
 const camionModel = mongoose.model('Camion', userSchema, 'camion');
 
-module.exports = servidorModel;
+module.exports = tipos_pModel;

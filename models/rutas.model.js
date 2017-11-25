@@ -1,15 +1,18 @@
-
+/**
+ * Created by desarrollo-001 on 31/08/17.
+ */
 const mongoose = require('mongoose');
 
-const rutaSchema = new mongoose.Schema({
-    
-    codcolonia: {
+const rutasSchema = new mongoose.Schema({
+    idruta: {
         type: Number,
         required: true
-    },
-    camion:[{type:Schema.ObjectId, ref:'Camiones'}]
+    }, 
+    
+    carreteras:[{type:Schema.ObjectId, ref:'Carretera'}],
+    ciudades:[{type:Schema.ObjectId, ref:'Ciudades'}]
 });
 
-const rutaModel = mongoose.model('Ruta', userSchema, 'ruta');
+const rutasModel = mongoose.model('Rutas', userSchema, 'rutas');
 
-module.exports = rutaModel;
+module.exports = rutasModel;
